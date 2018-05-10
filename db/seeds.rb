@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "Criando os tipos de contato..."
+Kind.create!([{description: "Residencial"}, {description: "Comercial"}, {description: "Móvel"}])
+puts "Tipos de contato criados."
