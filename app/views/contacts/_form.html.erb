@@ -1,5 +1,5 @@
 <%= form_with(model: contact, local: true, html: {class: "basic-grey"}) do |form| %>
-  <h1>Contact</h1>
+  <h1><%= contact.model_name.human(count: 1) %></h1>
   <% if contact.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
@@ -24,7 +24,8 @@
 
   <div class="field">
     <%= form.label :kind_id %>
-    <%= collection_select(:contact, :kind_id, @kinds, :id, :description) %>
+    <%#= collection_select(:contact, :kind_id, @kinds, :id, :description) %>
+    <%= form.collection_select(:kind_id, @kinds, :id, :description) %>
   </div>
 
   <%= form.fields_for :address do |address_fields| %>
@@ -38,7 +39,7 @@
     </div>
     <div class="field">
       <%= address_fields.label :state %>
-      <%= address_fields.text_field :state %>
+      <%= address_fields.select(:state, options_for_states(@contact.address.state)) %>
     </div>
   <% end %>
 
@@ -48,7 +49,7 @@
   </div>
 
   <div class="actions">
-    <%= form.submit "Enviar", class: "button" %>
-    <%= link_to "Voltar", contacts_path, class: "button" %>
+    <%= form.submit t('buttons.save'), class: "button" %>
+    <%= link_to t('buttons.back'), contacts_path, class: "button" %>
   </div>
 <% end %>

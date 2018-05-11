@@ -3,7 +3,7 @@ namespace :utils do
   task seed: :environment do
     puts "Criando os contatos..."
     10.times do
-      Contact.create!(name: Faker::Name.name, email: Faker::Internet.email, kind: Kind.all.sample, rmk: Faker::Lorem.paragraph(2))
+      Contact.create!(name: Faker::Name.name, email: Faker::Internet.email, kind: Kind.all.sample, rmk: LeroleroGenerator.sentence(2))
     end
     puts "Criando os contatos...[OK]"
 
