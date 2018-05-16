@@ -1,4 +1,9 @@
 /* Basic Grey */
+
+table {
+  width: 100%;
+}
+
 .basic-grey {
   margin-left: auto;
   margin-right: auto;
@@ -39,6 +44,10 @@
   color: #888;
 }
 
+.basic-grey .field_with_errors input {
+  border: 0.5px solid red !important;
+}
+
 .basic-grey input[type="text"], .basic-grey input[type="email"], .basic-grey textarea, .basic-grey select {
   border: 1px solid #DADADA;
   color: #888;
@@ -58,6 +67,10 @@
 
 .basic-grey textarea {
   padding: 5px 3px 3px 5px;
+}
+
+a {
+  color: #888;
 }
 
 .basic-grey select {
@@ -91,35 +104,10 @@
   background: #CF7A7A
 }
 
-.field_with_errors {
-  padding: 2px;
-  background-color: #E27575;
-  display: table;
+.basic-grey .phone-field {
+  width: 50% !important;
 }
 
-.actions{
+.actions {
   text-align: center;
-}
-
-#error_explanation {
-  width: 450px;
-  border: 2px solid #E27575;
-  padding: 7px 7px 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-
-  h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px -7px 0;
-    background-color: #E27575;
-    color: #fff;
-  }
-
-  ul li {
-    font-size: 12px;
-    list-style: square;
-  }
 }
