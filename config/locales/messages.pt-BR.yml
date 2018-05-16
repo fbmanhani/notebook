@@ -2,3 +2,6 @@
   messages:
     confirm: Confirma a operação?
     list: Lista de
+    created: Registro criado com sucesso!
+    updated: Registro alterado com sucesso!
+    destroyed: Registro excluído com sucesso!

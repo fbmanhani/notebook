@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.4'
 
+gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
+gem 'bundler', '>=1.8.4'
+gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
 # A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
 gem 'kaminari'
 gem 'kaminari-i18n'
