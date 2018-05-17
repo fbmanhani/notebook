@@ -73,8 +73,6 @@ end
 group :production do
   # Heroku pg dependency
   gem 'pg'
-  # Heroku rails dependency
-  gem 'rails_12factor'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
